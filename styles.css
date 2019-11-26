@@ -1,0 +1,550 @@
+@font-face {
+  font-family: "VarelaRound";
+  src: url("/src/fonts/VarelaRound/VarelaRound-Regular.ttf") format("truetype");
+  font-weight: 500;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "VarelaRound", sans-serif;
+  font-size: 17px;
+}
+
+body {
+  margin: 0;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+p {
+  color: inherit;
+  margin: inherit;
+  padding: inherit;
+  text-decoration: inherit;
+}
+
+/* STYLES APP */
+.app {
+  background-color: #fff;
+  color: #8d8d8d;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app .box0 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.box0 .results {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #8d8d8dd9;
+  color: #fff;
+  z-index: 1;
+}
+
+.box0 .results .state {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #8d8d8d;
+  width: 350px;
+  padding: 5px;
+}
+
+.results .state .log {
+  text-align: center;
+}
+
+.results .state .log i {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.results .state .log h2 {
+  font-size: 20px;
+}
+
+.results .state .info {
+  width: 250px;
+  text-align: center;
+  margin: 15px;
+}
+
+.state .controls button {
+  height: 30px;
+  padding: 0 10px;
+  border: none;
+  background-color: #fff;
+  font-weight: bold;
+  color: #8d8d8d;
+  transition: all 0.5s ease-in-out;
+}
+
+.state .controls button:hover {
+  background-color: #666666;
+  color: #fff;
+}
+
+.box0 .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.head h2 {
+  font-size: 20px;
+}
+
+.head .logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo .stage {
+  background-color: #8d8d8d;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  padding: 0 3px;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
+.head .times {
+  position: relative;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0 5px;
+  text-align: center;
+  color: #a1a1a1;
+  display: flex;
+  align-items: center;
+}
+
+.head .tplay::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  right: -12px;
+  background-color: #8d8d8d;
+  animation: pulse 0.5s ease-in-out infinite alternate;
+}
+
+.head .apples {
+  display: flex;
+  align-items: center;
+  padding: 1px;
+}
+
+.apples h2 {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.apples i {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #8d8d8d;
+  color: #fff;
+}
+
+.box0 .body {
+  display: flex;
+  background-color: #fff7f7;
+}
+
+.box0 .one {
+  display: flex;
+  flex-direction: column;
+  background-color: #ececec;
+}
+
+.one .lilbox {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  padding: 5px;
+  flex-wrap: wrap;
+}
+
+.lilbox .lil {
+  background-color: transparent;
+  display: inline-block;
+  margin: 1px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lilbox .apple {
+  background-color: #fff;
+}
+
+.lilbox .usT,
+.lilbox .usB,
+.lilbox .usL,
+.lilbox .usR {
+  background-color: #fff;
+}
+
+.lilbox .usT::after,
+.lilbox .usB::after,
+.lilbox .usL::after,
+.lilbox .usR::after {
+  content: "\f544";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  color: inherit;
+}
+
+/* COULEUR DE LA CARTE */
+.lilbox .a,
+.lilbox .e,
+.lilbox .i,
+.lilbox .m,
+.lilbox .q,
+.lilbox .u {
+  background-color: #fff;
+  color: #123;
+}
+
+.lilbox .b,
+.lilbox .f,
+.lilbox .j,
+.lilbox .n,
+.lilbox .r,
+.lilbox .v {
+  background-color: orange;
+  color: #fff;
+}
+
+.lilbox .c,
+.lilbox .g,
+.lilbox .k,
+.lilbox .o,
+.lilbox .s,
+.lilbox .w {
+  background-color: #009dff;
+  color: #fff;
+}
+
+.lilbox .d,
+.lilbox .h,
+.lilbox .l,
+.lilbox .p,
+.lilbox .t,
+.lilbox .x {
+  background-color: #0a9b38;
+  color: #fff;
+}
+
+.lilbox .usT::after {
+  transform: rotate(180deg);
+}
+
+.lilbox .usB::after {
+  transform: rotate(0deg);
+}
+
+.lilbox .usR::after {
+  transform: rotate(-90deg);
+}
+
+.lilbox .usL::after {
+  transform: rotate(90deg);
+}
+
+.apple::after {
+  content: "\f0e7";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  color: inherit;
+}
+
+.one .runControl {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.runControl button {
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-color: #fff;
+  color: #8d8d8d;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.runControl .active {
+  background-color: #8d8d8d;
+  color: #fff;
+}
+
+.runControl .speed {
+  font-size: 12px;
+}
+
+.runControl .controls {
+  font-size: 12px;
+}
+
+.runControl .controls button i {
+  font-size: 12px;
+}
+
+.two {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.two .fonctions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fonctions .inputs {
+  display: flex;
+  flex-direction: column;
+  width: 318px;
+}
+
+.inputs>div {
+  display: flex;
+  align-items: center;
+}
+
+.inputs>div .lib {
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.inputs>div .stp {
+  display: flex;
+}
+
+.inputs>div .stp button {
+  height: 30px;
+  width: 30px;
+  font-weight: bold;
+  background-color: #ececec;
+  color: #8d8d8d;
+  border: none;
+  margin: 1px;
+}
+
+.inputs>div .stp .btnsel {
+  border: 1px solid #8d8d8d;
+}
+
+.stp .btnorange {
+  background-color: orange !important;
+  color: #fff !important;
+}
+
+.stp .btnblue {
+  background-color: #009dff !important;
+  color: #fff !important;
+}
+
+.stp .btngreen {
+  background-color: #0a9b38 !important;
+  color: #fff !important;
+}
+
+.fonctions .stack {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.stack .stepslil {
+  margin-right: 5px;
+  overflow: hidden;
+  background-color: #8d8d8d;
+  display: flex;
+  width: 261px;
+}
+
+.stepslil .slil {
+  min-width: 25px;
+  min-height: 25px;
+  background-color: #ececec;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.stepslil .slil::after {
+  font-size: 12px;
+}
+
+.stepslil .nc {
+  background-color: #ececec;
+  color: #8d8d8d;
+}
+
+.stepslil .gc {
+  background-color: #0a9b38;
+  color: #fff;
+  border-color: orange;
+}
+
+.stepslil .bc {
+  background-color: #009dff;
+  color: #fff;
+  border-color: orange;
+}
+
+.stepslil .oc {
+  background-color: orange;
+  color: #fff;
+  border-color: orange;
+}
+
+.stepslil .mv::after {
+  content: "\f062";
+  font-family: "Font Awesome 5 Free";
+}
+
+.stepslil .tl::after {
+  content: "\f3e5";
+  font-family: "Font Awesome 5 Free";
+}
+
+.stepslil .tr::after {
+  content: "\f064";
+  font-family: "Font Awesome 5 Free";
+}
+
+.stepslil .f1::after {
+  content: "F1";
+}
+
+.stepslil .f2::after {
+  content: "F2";
+}
+
+.stepslil .f3::after {
+  content: "F3";
+}
+
+.stepslil .f4::after {
+  content: "F4";
+}
+
+.stepslil .f5::after {
+  content: "F5";
+}
+
+.two .actions {
+  display: flex;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.actions button {
+  height: 30px;
+  width: 30px;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  margin: 1px;
+}
+
+.actions .dir {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+}
+
+.actions .dir button {
+  color: #8d8d8d;
+  background-color: transparent;
+  border: 1px solid #8d8d8d;
+}
+
+.actions .color {
+  display: flex;
+  flex-direction: column;
+}
+
+.color .orange {
+  background-color: orange !important;
+  border-color: orange !important;
+}
+
+.color .blue {
+  background-color: #009dff !important;
+  border-color: #009dff !important;
+}
+
+.color .green {
+  background-color: #0a9b38 !important;
+  border-color: #0a9b38 !important;
+}
+
+.color .nocolor {
+  color: #666666;
+}
+
+.disabled {
+  opacity: 0;
+  cursor: auto;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.5);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+}

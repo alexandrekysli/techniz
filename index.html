@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TechniZ -by kYsLi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/vendor/fontawesome5/css/all.min.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="box0">
+            <div class="results" style="display: none;">
+                <div class="state">
+                    <div class="log">
+                        <i class="fas"></i>
+                        <h2 class="lib"></h2>
+                    </div>
+                    <div class="info">
+                    </div>
+                    <div class="controls">
+                        <button>Suivant</button>
+                    </div>
+                </div>
+            </div>
+            <div class="head">
+                <div class="logo">
+                    <h2>TchiZ</h2>
+                    <div class="stage">Niveau <span>1</span></div>
+                </div>
+                <div class="times">00:00</div>
+                <div class="apples">
+                    <h2>0</h2>
+                    <i class="fas fa-bolt"></i>
+                </div>
+            </div>
+            <div class="body">
+                <div class="one">
+                    <div class="lilbox">
+                    </div>
+                    <div class="runControl">
+                        <div class="speed">
+                            <button action="slow" class="aBtn">x.5</button>
+                            <button action="low" class="active aBtn">x1</button>
+                            <button action="medium" class="aBtn">x2</button>
+                            <button action="fast" class="aBtn">x3</button>
+                        </div>
+                        <div class="controls">
+                            <button class="aBtn" action="all"><i class="fas fa-play"></i></button>
+                            <button class="aBtn" action="pause"><i class="fas fa-pause"></i></button>
+                            <button class="aBtn" action="stop"><i class="fas fa-stop"></i></button>
+                            <button id="reset" action="reset"><i class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="two">
+                    <div class="fonctions">
+                        <div class="inputs">
+                            <h2>Tes Fonctions</h2>
+                        </div>
+                        <div class="stack">
+                            <h2>Actions</h2>
+                            <div class="stepslil">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <div class="dir">
+                            <button action="toup" class="aBtn"><i class="fas fa-arrow-up"></i></button>
+                            <button action="toleft" class="aBtn"><i class="fas fa-reply"></i></button>
+                            <button action="toright" class="aBtn"><i class="fas fa-share"></i></button>
+                        </div>
+                        <div class="color">
+                            <button action="colorange" class="orange aBtn"></i></button>
+                            <button action="colblue" class="blue aBtn"></i></button>
+                            <button action="colgreen" class="green aBtn"></i></button>
+                            <button action="noall" class="aBtn nocolor"><i class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="src/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
