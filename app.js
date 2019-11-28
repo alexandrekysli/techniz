@@ -13,7 +13,7 @@
 '--'          \  ' ;  `--'---'   ---`-'  |  ,   /
                `--`                       ---`-'
 */
-$(document).ready(function() {
+$(document).ready(function () {
   var niveau = "";
   var lilbox = 0;
   var lilB = 0;
@@ -56,7 +56,7 @@ $(document).ready(function() {
    * la dynamisation sous mongoose, vous devez envoyer tout les stage dans un JSON
    * Et reecrir cette partie
    */
-  $.getJSON("level.json", function(jsonF) {
+  $.getJSON("level.json", function (jsonF) {
     console.log("Fichier JSON chargé avec Succès");
     json0 = jsonF;
     levelO = getNiveau(jsonF);
@@ -140,6 +140,7 @@ $(document).ready(function() {
       }
       all = false;
     }
+    lvlPass = false;
 
     clearTimeout(intervalF);
     //-> Mise en forme du plateau
@@ -323,7 +324,7 @@ $(document).ready(function() {
   }
 
   //-> Execution du script
-  $(".runControl button").on("click", function(e) {
+  $(".runControl button").on("click", function (e) {
     //-> Retirer le focus sur un les boutons
     $(this)
       .parent()
@@ -360,12 +361,12 @@ $(document).ready(function() {
   });
 
   //-> Selection d'une case d'instruction
-  $(".inputs").on("click", ".stp button", function(e) {
+  $(".inputs").on("click", ".stp button", function (e) {
     $(".stp button").removeClass("btnsel");
     $(this).toggleClass("btnsel");
   });
   //-> Ajout d'une instruction par case
-  $(".actions").on("click", "button", function(e) {
+  $(".actions").on("click", "button", function (e) {
     if ($(".stp .btnsel").length) {
       let action = $(this).attr("action");
 
@@ -789,6 +790,7 @@ $(document).ready(function() {
         return "GC";
     }
   }
+
   function changeXY(direction) {
     if (direction === "usB") {
       return {
@@ -812,6 +814,7 @@ $(document).ready(function() {
       };
     }
   }
+
   function btnState(state) {
     if (state) {
       $(".aBtn")
@@ -829,6 +832,7 @@ $(document).ready(function() {
       gameInit();
     }
   }
+
   function areTheft(position) {
     var check = true;
     for (let i = 0; i < appleP.length; i++) {
@@ -844,6 +848,7 @@ $(document).ready(function() {
     }
     return check;
   }
+
   function getNiveau(json0) {
     //-> Tirer un nombre aleatoire afin de melanger les niveaus
     var nombreX = 0;
@@ -857,6 +862,7 @@ $(document).ready(function() {
     //-> Renvoi du niveau
     return json0.level[nombreX];
   }
+
   function endStage(state) {
     let result = document.querySelector(".box0 .results");
     let logI = document.querySelector(".results .log i");
@@ -922,10 +928,10 @@ $(document).ready(function() {
       //-> Enregistrement du Niveau et du temps mis en secondes -> Partie Terminée
       console.log(
         "Partie Terminée au Niveau [" +
-          levelV.textContent +
-          "] en [" +
-          secondeT +
-          "] Secondes"
+        levelV.textContent +
+        "] en [" +
+        secondeT +
+        "] Secondes"
       );
       clearInterval(chrono);
 
@@ -943,7 +949,7 @@ $(document).ready(function() {
   }
 
   //-> Bouton de la bulle d'information
-  $(".state .controls button").on("click", function() {
+  $(".state .controls button").on("click", function () {
     if (endState === "next") {
       $(".box0 .results").fadeOut("slow");
       lvlPass = true;
