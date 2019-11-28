@@ -25,6 +25,7 @@ $(document).ready(function () {
   var appleG = 0;
   var appleP = [];
   var lvlPass = false;
+  var arePause = false;
   var times = 0;
   var levelN = 0;
   var theft = false;
@@ -337,15 +338,21 @@ $(document).ready(function () {
 
     //-> Executer toute les instructions
     if (action === "all") {
-      document.querySelector(".stepslil").innerHTML = "";
-      stepB = [];
-      stackMaker(document.querySelectorAll(".inputs .fonction"));
+      if (!arePause) {
+        document.querySelector(".stepslil").innerHTML = "";
+        stepB = [];
+        stackMaker(document.querySelectorAll(".inputs .fonction"));
+      } else {
+        playBot();
+      }
+
     } else if (action === "stop") {
       btnState(false);
     } else if (action === "reset") {
       all = true;
       btnState(false);
     } else if (action === "pause") {
+      arePause = true;
       clearInterval(intervalF);
     }
     //-> Changer vitesse d'execution dus programme
