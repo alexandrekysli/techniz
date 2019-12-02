@@ -548,3 +548,91 @@ p {
     transform: scale(1);
   }
 }
+
+/* FOR MAKER */
+.maker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.two .controls {
+  max-width: 170px;
+}
+
+.two .controls .aBtn {
+  height: 30px;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
+  transform: scale(.9);
+}
+
+.two .controls .fcs {
+  transform: scale(1.1);
+}
+
+.two .controls>* {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.two .controls .items .aBtn {
+  border: 1px solid #8d8d8d;
+  background-color: transparent;
+  color: #8d8d8d;
+}
+
+.two .out {
+  position: relative;
+}
+
+.two .out .clip {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #c2c2c2;
+  color: #fff;
+  border: none;
+}
+
+.two .out .clip:hover {
+  background-color: rgb(114, 114, 114);
+}
+
+.two .out .clip:focus {
+  background-color: rgb(44, 44, 44);
+}
+
+.two .out code {
+  font-family: monospace !important;
+  display: block;
+  padding: 5px;
+  color: #8d8d8d;
+  font-size: 12px;
+  background-color: #eee;
+  width: 300px;
+  height: 100px;
+  word-break: break-all;
+}
+
+.clk .lil {
+  cursor: pointer;
+  border: 1px solid #8a8a8a;
+}
+
+.two>button {
+  background-color: transparent;
+  border: 1px solid #8a8a8a;
+  color: #8a8a8a;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 5px;
+}
