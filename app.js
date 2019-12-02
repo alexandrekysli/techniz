@@ -870,7 +870,7 @@ $(document).ready(function () {
     let levelNum = nombreX;
 
     //-> Renvoi du niveau
-    return json0.level[0];
+    return json0.level[levelNum];
   }
 
   function endStage(state) {
