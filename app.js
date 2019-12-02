@@ -347,9 +347,11 @@ $(document).ready(function () {
       }
 
     } else if (action === "stop") {
+      arePause = false;
       btnState(false);
     } else if (action === "reset") {
       all = true;
+      arePause = false;
       btnState(false);
     } else if (action === "pause") {
       arePause = true;
@@ -470,6 +472,7 @@ $(document).ready(function () {
         }
       }
     }
+
     if (funcStack.f1.length) makeStep(funcStack);
   }
 
@@ -867,7 +870,7 @@ $(document).ready(function () {
     let levelNum = nombreX;
 
     //-> Renvoi du niveau
-    return json0.level[nombreX];
+    return json0.level[0];
   }
 
   function endStage(state) {
